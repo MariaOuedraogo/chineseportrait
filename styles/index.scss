@@ -1,3 +1,44 @@
-body{
-    background-color: red;
+@import 'main';
+
+@font-face {
+    font-family: 'akira';
+    src: url('../fonts/akira.woff2') format('woff2'),
+        url('../fonts/akira.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Pour la barre de défilement */
+::-webkit-scrollbar {
+display: none;}
+
+
+
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+
+body {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "akira", sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Pour une transition de défilement fluide */
+    scroll-snap-type: y mandatory; /* Définit le type de snap pour l'axe vertical */
+    color: #F52571;
+    background-color: #F9D5E3;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

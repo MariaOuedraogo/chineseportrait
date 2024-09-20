@@ -1,5 +1,230 @@
+@charset "UTF-8";
+@keyframes rotation-infinie {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation-infinie-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes grow-shrink {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+    /* Move up by 20px */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.header,
+.hero,
+.analogies,
+.footer {
+  padding: 24px 50px;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+  font-size: 0.813rem;
+  color: white;
+}
+
+.header {
+  top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 50px;
+  z-index: 2;
+}
+.header__links {
+  transition: color 1s ease;
+  /* Transition douce de la couleur */
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__link, .footer__text {
+  text-align: center;
+}
+
+.hero {
+  background: radial-gradient(circle, #F52571 0%, #f48196 30%, #F37F29 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero__title {
+  text-align: center;
+  margin: auto;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 0 4px #FFFFFF, 0 0 0.5px #FFFFFF, 0 0 0.5px #FFFFFF, 0 0 0.5px #FFFFFF;
+  /* Ombre la plus étendue */
+}
+.hero__title--bigger {
+  display: inline-block;
+  animation: grow-shrink 2s ease-in-out infinite;
+}
+.hero__title--turn {
+  animation: rotation-infinie 2s linear infinite;
+  display: inline-block;
+  margin: 0;
+}
+.hero__title--turn2 {
+  animation: rotation-infinie-reverse 2s linear infinite;
+  display: inline-block;
+  margin: 0;
+}
+
+.analogies__container {
+  padding-top: 50px;
+}
+.analogies__container:last-child {
+  padding-bottom: 10px;
+}
+.analogies__title {
+  font-size: 1.2rem;
+}
+.analogies__text {
+  font-family: "DM sans", sans-serif;
+  text-transform: none;
+  font-size: 1rem;
+}
+.analogies__img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.analogies__title--desk {
+  display: none;
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .analogies__container {
+    gap: 5px;
+  }
+  .analogies__img {
+    width: 400px;
+  }
+}
+@media (min-width: 700px) {
+  .header,
+  .hero,
+  .analogies,
+  .footer {
+    padding: 24px 24px;
+  }
+  .analogies__container:first-child {
+    padding-top: 130px;
+  }
+  .analogies__container {
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .analogies__title--mobile {
+    display: none;
+  }
+  .analogies__title--desk {
+    display: block;
+  }
+  .analogies__title {
+    font-size: 1.1875rem;
+  }
+  .analogies__text {
+    font-size: 0.813rem;
+    width: 300px;
+  }
+  .analogies__img {
+    aspect-ratio: 641/546;
+    transition: 1s ease-in-out;
+    overflow-x: hidden;
+  }
+  .analogies__img:hover {
+    scale: 1.1;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__link, .footer__text {
+    text-align: left;
+  }
+}
+@media (min-width: 1001px) {
+  .analogies__container {
+    gap: 10px;
+  }
+  .analogies img {
+    width: 700px;
+    /* Taille minimale */
+  }
+}
+@font-face {
+  font-family: "akira";
+  src: url("../fonts/akira.woff2") format("woff2"), url("../fonts/akira.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Pour la barre de défilement */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
-  background-color: red;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "akira", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Pour une transition de défilement fluide */
+  scroll-snap-type: y mandatory; /* Définit le type de snap pour l'axe vertical */
+  color: #F52571;
+  background-color: #F9D5E3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*# sourceMappingURL=index.css.map */

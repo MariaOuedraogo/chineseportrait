@@ -1,0 +1,270 @@
+@keyframes rotation-infinie {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation-infinie-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes grow-shrink {
+
+    0%,
+    100% {
+        transform: scale(1); // Taille normale
+    }
+
+    50% {
+        transform: scale(1.25); // Taille agrandie (ajustez la valeur selon vos besoins)
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Move up by 20px */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.header,
+.hero,
+.analogies,
+.footer {
+    padding: 24px 50px;
+}
+
+.header {
+    position: fixed;
+    z-index: 1;
+    font-size: 0.813rem;
+    color: white;
+
+
+
+}
+
+.header {
+
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 50px;
+    z-index: 2;
+
+
+    &__links {
+        transition: color 1s ease;
+        /* Transition douce de la couleur */
+
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__link,
+    &__text {
+        text-align: center;
+    }
+
+}
+
+.hero {
+    // background-color: #FFE3AC;
+    background: radial-gradient(circle, #F52571 0%, #f48196 30%, #F37F29 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // scroll-snap-align: start;
+    z-index: 1;
+
+    &__title {
+        text-align: center;
+        margin: auto;
+        font-size: 1.5rem;
+        color: white;
+        text-shadow:
+            0 0 4px #FFFFFF,
+            /* Ombre de base */
+            0 0 .5px #FFFFFF,
+            /* Ombre intermédiaire */
+            0 0 .5px #FFFFFF,
+            /* Ombre plus étendue */
+            0 0 .5px #FFFFFF;
+        /* Ombre la plus étendue */
+    }
+
+    &__title--bigger {
+        display: inline-block;
+        animation: grow-shrink 2s ease-in-out infinite;
+
+    }
+
+    &__title--turn {
+        animation: rotation-infinie 2s linear infinite;
+        display: inline-block;
+        margin: 0;
+    }
+
+    &__title--turn2 {
+        animation: rotation-infinie-reverse 2s linear infinite;
+        display: inline-block;
+        margin: 0;
+
+    }
+
+}
+
+.analogies {
+
+&__container{
+    padding-top: 50px;
+}
+
+&__container:last-child{
+    padding-bottom: 10px;
+}
+    &__title {
+        font-size: 1.2rem;
+    }
+
+    &__text {
+        font-family: "DM sans", sans-serif;
+        text-transform: none;
+        font-size: 1rem;
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    &__title--desk {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+
+
+    .analogies {
+
+
+        &__container {
+            gap: 5px;
+        }
+
+        &__img {
+            width: 400px;
+        }
+
+    }
+
+}
+
+
+@media(min-width:700px) {
+
+    .header,
+    .hero,
+    .analogies,
+    .footer {
+        padding: 24px 24px;
+    }
+
+    .analogies {
+        &__container:first-child {
+            padding-top: 130px;
+
+        }
+
+        &__container {
+            padding-bottom: 200px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        &__title--mobile {
+            display: none;
+        }
+
+        &__title--desk {
+            display: block;
+        }
+
+        &__title {
+            font-size: 1.1875rem;
+        }
+
+        &__text {
+            font-size: 0.813rem;
+            width: 300px;
+        }
+
+
+        &__img {
+            aspect-ratio: 641/546;
+            transition: 1s ease-in-out;
+            overflow-x: hidden;
+
+        }
+
+        &__img:hover {
+            scale: 1.1;
+        }
+
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__link,
+        &__text {
+            text-align: left;
+        }
+    }
+}
+
+@media (min-width: 1001px) {
+
+    .analogies {
+        &__container {
+            gap: 10px;
+        }
+
+        img {
+            width: 700px;
+            /* Taille minimale */
+        }
+    }
+}
