@@ -62,7 +62,7 @@
 }
 
 .hero {
-  background: radial-gradient(circle, #F52571 0%, #f48196 30%, #F37F29 100%);
+  background: radial-gradient(circle, #f52571 0%, #f48196 30%, #F37F29 100%);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -133,6 +133,51 @@
   z-index: 2;
 }
 
+.form-section__box {
+  display: flex;
+  margin-top: 50px;
+}
+.form-section__results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(245, 37, 113, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(245, 37, 113, 0.3);
+  padding: 1rem;
+}
+.form-section__title {
+  text-align: center;
+}
+.form-section__input {
+  background-color: rgb(242, 240, 240);
+  border: solid 1px white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-top: 5px;
+  text-transform: lowercase;
+  font-family: "DM sans", sans-serif;
+}
+.form-section__submit {
+  text-align: center;
+  width: fit-content;
+  margin: 10px auto 0;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  border: solid 1px #f52571;
+  transition: background-color 0.3s ease-in-out;
+}
+.form-section__submit:hover {
+  cursor: pointer;
+  background-color: #bffc63;
+  border-color: #bffc63;
+}
+
 @media (min-width: 700px) and (max-width: 1000px) {
   .analogies__container {
     gap: 5px;
@@ -151,6 +196,9 @@
   .analogies__container:first-child {
     padding-top: 130px;
   }
+  .analogies__container:last-child {
+    padding-bottom: 50px;
+  }
   .analogies__container {
     padding-bottom: 200px;
     display: flex;
@@ -167,6 +215,7 @@
   }
   .analogies__title {
     font-size: 1.1875rem;
+    width: 300px;
   }
   .analogies__text {
     font-size: 0.813rem;
@@ -212,23 +261,18 @@
   display: none;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
-
 body {
   margin: 0;
   text-transform: uppercase;
   font-family: "akira", sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth; /* Pour une transition de défilement fluide */
-  scroll-snap-type: y mandatory; /* Définit le type de snap pour l'axe vertical */
+  scroll-behavior: smooth;
   color: #F52571;
   background-color: #F9D5E3;
 }
 
 ::selection {
-  background-color: #fca0c3; /* Remplacez par la couleur de votre choix */
+  background-color: greenyellow; /* Remplacez par la couleur de votre choix */
 }
 
 a {

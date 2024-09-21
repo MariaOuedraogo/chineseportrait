@@ -84,14 +84,14 @@
 
 .hero {
     // background-color: #FFE3AC;
-    background: radial-gradient(circle, #F52571 0%, #f48196 30%, #F37F29 100%);
+    background: radial-gradient(circle, #f52571 0%, #f48196 30%, #F37F29 100%);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     padding: 24px 50px;
-    
+
     &__title {
         text-align: center;
         margin: auto;
@@ -131,23 +131,25 @@
 
 .analogies {
 
-&__container{
-    padding-top: 50px;
-    text-align: center;
+    &__container {
+        padding-top: 50px;
+        text-align: center;
 
-}
+    }
 
-&__container:last-child{
-    padding-bottom: 10px;
-}
+    &__container:last-child {
+        padding-bottom: 10px;
+    }
+
     &__title {
         font-size: 1.2rem;
     }
 
-    &__title--mobile{
+    &__title--mobile {
         padding: 0 5px;
 
     }
+
     &__text {
         font-family: "DM sans", sans-serif;
         text-transform: none;
@@ -165,19 +167,78 @@
         display: none;
     }
 
-    &__image-container{
+    &__image-container {
         position: relative;
 
     }
-    &__overlay{
+
+    &__overlay {
         position: absolute;
         background-color: #F9D5E3;
-        
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: 2;
+    }
+}
+
+
+.form-section {
+
+    &__box {
+        display: flex;
+        margin-top: 50px;
+
+    }
+
+    &__results {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        // background-color:#8cfe8c;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(245, 37, 113, .1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(245, 37, 113, .3);
+        padding: 1rem;
+
+    }
+
+    &__title {
+        text-align: center;
+
+    }
+
+    &__input {
+        background-color: rgb(242, 240, 240);
+        border: solid 1px white;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+        margin-top: 5px;
+        text-transform: lowercase;
+        font-family: "DM sans", sans-serif;
+    }
+
+    &__submit {
+        text-align: center;
+        width: fit-content;
+        margin: 10px auto 0;
+        padding: .5rem 1rem;
+        border-radius: 3rem;
+        border: solid 1px #f52571;
+        transition: background-color .3s ease-in-out;
+
+    }
+
+    &__submit:hover {
+        cursor: pointer;
+        background-color: #bffc63;
+        border-color: #bffc63;
     }
 }
 
@@ -215,6 +276,11 @@
 
         }
 
+        &__container:last-child {
+            padding-bottom: 50px;
+
+        }
+
         &__container {
             padding-bottom: 200px;
             display: flex;
@@ -235,6 +301,7 @@
 
         &__title {
             font-size: 1.1875rem;
+            width: 300px;
         }
 
         &__text {

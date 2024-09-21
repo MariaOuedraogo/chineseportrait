@@ -21,26 +21,21 @@ display: none;}
 
 
 
-html {
-    scroll-snap-type: y mandatory;
-}
-
-
 body {
     margin: 0;
     text-transform: uppercase;
     font-family: "akira", sans-serif;
     overflow-x: hidden;
-    scroll-behavior: smooth; /* Pour une transition de défilement fluide */
-    scroll-snap-type: y mandatory; /* Définit le type de snap pour l'axe vertical */
+    scroll-behavior: smooth;
     color: #F52571;
     background-color: #F9D5E3;
-
 }
 
 ::selection {
-    background-color: #fca0c3; /* Remplacez par la couleur de votre choix */
+    background-color: greenyellow; /* Remplacez par la couleur de votre choix */
 }
+
+
 
 a {
     text-decoration: none;
