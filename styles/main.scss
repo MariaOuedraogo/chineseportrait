@@ -74,6 +74,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
 
     &__link,
     &__text {
@@ -324,6 +325,7 @@
     .footer {
         flex-direction: row;
         justify-content: space-between;
+
 
         &__link,
         &__text {
