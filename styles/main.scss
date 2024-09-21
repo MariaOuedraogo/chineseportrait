@@ -53,24 +53,18 @@
     padding: 24px 50px;
 }
 
+
 .header {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     font-size: 0.813rem;
     color: white;
-
-
-
-}
-
-.header {
-
     top: 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding-top: 50px;
-    z-index: 2;
+
 
 
     &__links {
@@ -169,6 +163,21 @@
     &__title--desk {
         display: none;
     }
+
+    &__image-container{
+        position: relative;
+
+    }
+    &__overlay{
+        position: absolute;
+        background-color: #F9D5E3;
+        
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
@@ -236,10 +245,6 @@
             transition: 1s ease-in-out;
             overflow-x: hidden;
 
-        }
-
-        &__img:hover {
-            scale: 1.1;
         }
 
     }

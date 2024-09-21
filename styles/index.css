@@ -44,18 +44,14 @@
 
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   font-size: 0.813rem;
   color: white;
-}
-
-.header {
   top: 0;
   display: flex;
   width: 100%;
   justify-content: space-between;
   padding-top: 50px;
-  z-index: 2;
 }
 .header__links {
   transition: color 1s ease;
@@ -126,6 +122,18 @@
 .analogies__title--desk {
   display: none;
 }
+.analogies__image-container {
+  position: relative;
+}
+.analogies__overlay {
+  position: absolute;
+  background-color: #F9D5E3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
 
 @media (min-width: 700px) and (max-width: 1000px) {
   .analogies__container {
@@ -169,9 +177,6 @@
     aspect-ratio: 641/546;
     transition: 1s ease-in-out;
     overflow-x: hidden;
-  }
-  .analogies__img:hover {
-    scale: 1.1;
   }
   .footer {
     flex-direction: row;
