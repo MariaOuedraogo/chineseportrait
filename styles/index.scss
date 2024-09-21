@@ -38,6 +38,10 @@ body {
 
 }
 
+::selection {
+    background-color: #fca0c3; /* Remplacez par la couleur de votre choix */
+}
+
 a {
     text-decoration: none;
     color: inherit;

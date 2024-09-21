@@ -47,9 +47,6 @@
 
 
 
-.hero {
-    padding: 24px 50px;
-}
 
 
 .header {
@@ -93,9 +90,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    // scroll-snap-align: start;
-    z-index: 1;
-
+    padding: 24px 50px;
+    
     &__title {
         text-align: center;
         margin: auto;

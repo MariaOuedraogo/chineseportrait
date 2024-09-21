@@ -35,10 +35,6 @@
     transform: translateY(0);
   }
 }
-.hero {
-  padding: 24px 50px;
-}
-
 .header {
   position: fixed;
   z-index: 3;
@@ -72,7 +68,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1;
+  padding: 24px 50px;
 }
 .hero__title {
   text-align: center;
@@ -229,6 +225,10 @@ body {
   scroll-snap-type: y mandatory; /* Définit le type de snap pour l'axe vertical */
   color: #F52571;
   background-color: #F9D5E3;
+}
+
+::selection {
+  background-color: #fca0c3; /* Remplacez par la couleur de votre choix */
 }
 
 a {
