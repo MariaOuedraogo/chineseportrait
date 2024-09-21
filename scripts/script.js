@@ -28,7 +28,7 @@ fetch('scripts/data.json')
             gsap.fromTo(analogyContainer.querySelector(".analogies__overlay"),
                 { x: "0%" },
                 {
-                    x: "-100%", duration: 3, paused: true, scrollTrigger: {
+                    x: "-100%", duration: 5, paused: true, scrollTrigger: {
                         trigger: analogyContainer,
                         start: "top 80%",
                     }
