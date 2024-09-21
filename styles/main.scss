@@ -58,7 +58,8 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding-top: 50px;
+    // padding-top: 50px;
+    padding: 50px 7px 0;
 
 
 
@@ -133,7 +134,7 @@
 .analogies {
 
     &__container {
-        padding-top: 50px;
+        padding-top: 100px;
         text-align: center;
 
     }
@@ -186,10 +187,10 @@
 
 
 .form-section {
+    margin: 120px 0 50px;
 
     &__box {
         display: flex;
-        margin-top: 50px;
 
     }
 
