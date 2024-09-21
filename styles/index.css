@@ -107,6 +107,9 @@
 .analogies__title {
   font-size: 1.2rem;
 }
+.analogies__title--mobile {
+  padding: 0 5px;
+}
 .analogies__text {
   font-family: "DM sans", sans-serif;
   text-transform: none;
