@@ -24,6 +24,12 @@
         "value": "'strawberry'",
         "explanation":"I'd be Zora Neale Hurston's “But their eyes darted to god.” This is the story of Janie Crawford, sold by her grandmother to a man who owns 60 acres of land. Her curiosity and determination enable her to discover life, its joys and sorrows, but also love. This book is a magnificent feminist work.",
         "img": "img/fruit.jpg"
+    },
+    {
+        "analogy": "song",
+        "value": "'redemption song'",
+        "explanation":"Redemption Song tells the story of Bob Marley's escape from a cycle of persecution with the help of God. He then speaks to his fans: “Emancipate yourselves from mental slavery, no one but ourselves can free our spirit”. The song is like his farewell message.",
+        "img": "img/song.jpg"
     }
 
 

@@ -46,12 +46,12 @@
 }
 
 
-.header,
-.hero,
-.analogies,
-.footer {
-    padding: 24px 50px;
-}
+// .header,
+// .hero,
+// .analogies,
+// .footer {
+//     padding: 24px 50px;
+// }
 
 
 .header {
@@ -139,6 +139,8 @@
 
 &__container{
     padding-top: 50px;
+    text-align: center;
+
 }
 
 &__container:last-child{
@@ -152,6 +154,7 @@
         font-family: "DM sans", sans-serif;
         text-transform: none;
         font-size: 1rem;
+        padding: 0 10px;
     }
 
     &__img {
@@ -220,6 +223,8 @@
             flex-direction: row-reverse;
             justify-content: space-evenly;
             align-items: center;
+            text-align: left;
+
         }
 
         &__title--mobile {
@@ -237,6 +242,8 @@
         &__text {
             font-size: 0.813rem;
             width: 300px;
+            padding: 0;
+
         }
 
 

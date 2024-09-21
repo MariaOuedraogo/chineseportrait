@@ -35,13 +35,6 @@
     transform: translateY(0);
   }
 }
-.header,
-.hero,
-.analogies,
-.footer {
-  padding: 24px 50px;
-}
-
 .header {
   position: fixed;
   z-index: 3;
@@ -102,6 +95,7 @@
 
 .analogies__container {
   padding-top: 50px;
+  text-align: center;
 }
 .analogies__container:last-child {
   padding-bottom: 10px;
@@ -113,6 +107,7 @@
   font-family: "DM sans", sans-serif;
   text-transform: none;
   font-size: 1rem;
+  padding: 0 10px;
 }
 .analogies__img {
   width: 100%;
@@ -159,6 +154,7 @@
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
+    text-align: left;
   }
   .analogies__title--mobile {
     display: none;
@@ -172,6 +168,7 @@
   .analogies__text {
     font-size: 0.813rem;
     width: 300px;
+    padding: 0;
   }
   .analogies__img {
     aspect-ratio: 641/546;
