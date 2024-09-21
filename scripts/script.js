@@ -13,10 +13,10 @@ fetch('scripts/data.json')
             analogyContainer.innerHTML = `
                 <div class="analogies__content">
                     <h2 class="analogies__title analogies__title--mobile">
-                        ${result.analogy}, I would be the ${result.analogy} ${result.value}
+                       a ${result.analogy}, I would be the ${result.analogy} ${result.value}
                     </h2>
                     <h2 class="analogies__title analogies__title--desk">
-                         ${result.analogy}, I would <br> be the ${result.analogy} ${result.value}
+                        a ${result.analogy}, I would <br> be the ${result.analogy} ${result.value}
                     </h2>
                     <p class="analogies__text">${result.explanation}</p>
                 </div>
@@ -65,10 +65,10 @@ fetch('scripts/data.json')
                     newAnalogyContainer.innerHTML = `
                         <div class="analogies__content">
                             <h2 class="analogies__title analogies__title--mobile">
-                                ${document.querySelector('input#analogy').value}, I would be the ${document.querySelector('input#analogy').value} ${document.querySelector('input#response').value}
+                                a${document.querySelector('input#analogy').value}, I would be the ${document.querySelector('input#analogy').value} ${document.querySelector('input#response').value}
                             </h2>
                             <h2 class="analogies__title analogies__title--desk">
-                                ${document.querySelector('input#analogy').value}, I would <br> be the ${document.querySelector('input#analogy').value} ${document.querySelector('input#response').value}
+                                a ${document.querySelector('input#analogy').value}, I would <br> be the ${document.querySelector('input#analogy').value} ${document.querySelector('input#response').value}
                             </h2>
                             <p class="analogies__text">
                                 ${document.querySelector('input#detail').value}

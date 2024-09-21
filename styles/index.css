@@ -97,6 +97,7 @@
 .analogies__container {
   padding-top: 100px;
   text-align: center;
+  overflow: hidden;
 }
 .analogies__container:last-child {
   padding-bottom: 10px;
